@@ -1,0 +1,58 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="canvas">
+
+<header>
+    <ul class="headerborder">
+       <li class="color1"></li>
+       <li class="color2"></li>
+       <li class="color3"></li>
+    </ul>
+    <div class="wrapper clearfix">
+        <div class="companyheader clearfix">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "Smart Inc."})|raw}}
+        </div>
+        {{widget('extendednavigation', 'navigationheader', {})|raw}}
+    </div>
+</header>
+
+<section>
+    {{widget('feature', 'featurehome', {"header": "Welcome to Lift Module.", "strapline":"Aenean vitae mattis lacus. Nullam posuer. Phasellus convallis cuis elit ut pharetra.", "buttonText":"Find out more today →","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': true})|raw}}
+</section>
+
+<div class="main wrapper clearfix">
+    {{zone('main')|raw}}
+</div>
+
+<ul class="headerborder">
+   <li class="color1"></li>
+   <li class="color2"></li>
+   <li class="color3"></li>
+</ul>
+<footer>
+     
+    <div class="wrapper clearfix">
+        <div class="responsivecolumns columns-three-33-34-33">
+            <div class="column columns-three-left">
+                {{widget('logo', 'footercolumn1logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                {{widget('companyname', 'footercolumn1companyname', {"business": "Smart Inc."})|raw}}
+            </div>
+            <div class="column columns-three-middle">
+                {{widget('content', 'footercolumn2content1', {"content":"<h4>IPSUMS</h4>"})|raw}}
+                {{widget('profile', 'footercolumn2profileaddress', { 'profileType':'address', 'address':'profile'})|raw}}
+            </div>
+            <div class="column columns-three-right">
+                {{widget('content', 'footercolumn3content1', {"content":"<h4>CONTACTO</h4>"})|raw}}
+                {{widget('profile', 'footercolumn3profileEmail', { 'profileType':'email', 'email':'profile'})|raw}}
+                {{widget('profile', 'footercolumn3profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}}
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+{% endblock %}
