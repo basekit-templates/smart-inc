@@ -19,6 +19,12 @@
     </div>
 </header>
 
+<div class="pageintro">
+    <div class="wrapper">
+        <h4>{{ page.title }}</h4>
+    </div>
+</div>
+
 <div class="main wrapper clearfix">
     {{zone('main')|raw}}
 </div>
@@ -29,11 +35,11 @@
    <li class="color3"></li>
 </ul>
 <footer>
-     
     <div class="wrapper clearfix">
         <div class="responsivecolumns columns-three-33-34-33">
             <div class="column columns-three-left">
-                {{widget('companyheader', 'footercolumn1companyheader', {"defaultlogo": asset('images/logo-wh.png')})|raw}}
+                {{widget('logo', 'footercolumn1logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                {{widget('companyname', 'footercolumn1companyname', {"business": "Smart Inc."})|raw}}
             </div>
             <div class="column columns-three-middle">
                 {{widget('content', 'footercolumn2content1', {"content":"<h4>IPSUMS</h4>"})|raw}}
