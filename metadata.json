@@ -98,7 +98,10 @@
             "font-weight": "400",
             "line-height": "28px",
             "color": "@color-swatch6",
-            "letter-spacing": "inherit"
+            "color-hover": "lighten(@color-swatch6,10%)",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "@color-swatch3"
         },
         "font7": {
             "font-family": "Lato",
@@ -106,7 +109,9 @@
             "font-weight": "200",
             "line-height": "32px",
             "color": "@color-swatch1",
-            "letter-spacing": "inherit"
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch3",
+            "background-color-hover": "darken(@color-swatch3,5%)"
         },
         "font8": {
             "font-family": "Lato",
