@@ -36,7 +36,7 @@
     <div class="wrapper clearfix">
         <div class="responsivecolumns columns-three-33-34-33">
             <div class="column columns-three-left">
-                {{widget('logo', 'footercolumn1logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+              {{widget('logo', 'footercolumn1logo', {"defaultlogo": asset('images/logo.png')})|raw}}
                 {{widget('companyname', 'footercolumn1companyname', {"business": "Smart Inc."})|raw}}
             </div>
             <div class="column columns-three-middle">
@@ -45,11 +45,17 @@
             </div>
             <div class="column columns-three-right">
                 {{widget('content', 'footercolumn3content1', {"content":"<h4>CONTACTO</h4>"})|raw}}
-                {{widget('profile', 'footercolumn3profileEmail', { 'profileType':'email', 'email':'profile'})|raw}}
-                {{widget('profile', 'footercolumn3profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}}
+                {{widget('profile', 'footercolumn3profileEmail', { 'profileType':'email'})|raw}}
+                {{widget('profile', 'footercolumn3profilePhone', { 'profileType':'phone'})|raw}}
             </div>
         </div>
     </div>
+</footer>
+
+</div>
+
+{% endblock %}
+/div>
 </footer>
 
 </div>

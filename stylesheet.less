@@ -1,5 +1,4 @@
 body {
-  /*background-color: lighten(@color-swatch5,25%);*/
   background-color: #b5c7d4;
   margin: 0;
   padding: 0;
@@ -258,7 +257,7 @@ footer h4 {
   letter-spacing: 2px;
 }
 
-footer p, footer .widget.profile span {
+footer p, footer {
   font-family: @font-swatch5-font-family;
   color: lighten(@color-swatch5,10%);
   line-height:@font-swatch5-line-height;
@@ -269,12 +268,6 @@ footer span {
   color: @color-swatch1;
 }
 
-/* FOOTER PROFILE STYLES */
-
-.widget.profile ul.twitter {
-    padding: 0;
-    margin: 0;
-}
 
 /* ===============================
    STANDARD NAVIGATION
@@ -377,19 +370,9 @@ footer span {
   letter-spacing: @font-swatch6-letter-spacing;
 }
 
-.widget.extendednavigation ul li a:hover {
-  color: @color-swatch3;
+.widget.extendednavigation ul li a:hover, .widget.extendednavigation ul li.folder .text:hover {
+  color: @font-swatch6-color-hover;
   text-decoration: none;
-}
-
-/* SELECTED */
-
-.widget.extendednavigation ul li.selected {
- 
-}
-
-.widget.extendednavigation ul li.selected:hover { 
-
 }
 
 /* FOLDER */
@@ -449,13 +432,6 @@ footer span {
   background-repeat: no-repeat;
 }
 
-.widget.extendednavigation li:hover > ul > li > a {
-
-}
-
-.widget.extendednavigation li:hover > ul li .text:hover {
-  color: @color-swatch3;
-}
 
 /* EXTENDED NAVIGATION - INSIDE ZONE */
 
@@ -1329,13 +1305,123 @@ hr.line.align-right {
    PROFILE WIDGET
    =============================== */
 
-.widget.profile span {
+.widget.profile span, .widget.profile a {
   display: block;
   font-family: @font-swatch5-font-family;
   font-size: @font-swatch5-font-size;
+  font-weight: 300;
   line-height: @font-swatch5-line-height;
-  color: @font-swatch5-color;
+  color: lighten(@font-swatch5-color,15%);
+  letter-spacing: @font-swatch5-letter-spacing;
 }
+
+.widget.profile a:hover {
+  color: @color-swatch1;
+  text-decoration: none;
+}
+
+/* FOOTER PROFILE - TWITTER */
+
+.widget.profile ul.twitter {
+  padding: 0px;
+  margin: 0px;
+}
+
+.widget.profile ul.twitter li {
+  list-style: none;
+}
+
+.widget.profile ul.twitter p {
+  font-family: @font-swatch5-font-family;
+  font-size: @font-swatch5-font-size;
+  font-weight: 300;
+  line-height: @font-swatch5-line-height;
+  color: lighten(@font-swatch5-color,15%);
+  letter-spacing: @font-swatch5-letter-spacing;
+}
+
+.widget.profile ul.twitter img, .widget.profile ul.twitter time,
+.widget.profile ul.twitter span {
+  display: none;
+}
+
+/* FOOTER PROFILE - SIGNUP FORM */
+
+.widget.profile form {
+  padding: 0px;
+}
+
+.widget.profile form fieldset {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.widget.profile form label {
+  display: none;
+  width: 100%;
+  float: left;
+  margin-bottom: 6px;
+  font-family: @font-swatch5-font-family;
+  font-size: @font-swatch5-font-size;
+  font-weight: 300;
+  line-height: @font-swatch5-line-height;
+  color: lighten(@font-swatch5-color,15%);
+  letter-spacing: @font-swatch5-letter-spacing;
+}
+
+.widget.profile form input {
+  height: 42px;
+  background-color: darken(@color-swatch4,3%);
+  border: 1px solid darken(@color-swatch4,13%);
+  font-family: @font-swatch5-font-family;
+  font-size: @font-swatch5-font-size;
+  font-weight: 300;
+  line-height: @font-swatch5-line-height;
+  color: lighten(@font-swatch5-color,25%);
+  letter-spacing: @font-swatch5-letter-spacing;
+  text-indent: 16px;
+  -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+        border-radius: 3px;
+}
+
+.widget.profile form input:focus {
+  outline: none;
+}
+
+.widget.profile form button {
+  margin: 0;
+  padding: 12px;
+  border: 1px solid darken(@color-swatch2,2%);
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  box-shadow: inset 0px 2px 2px rgba(255,255,255,0.3);
+
+  font-family: @font-swatch7-font-family;
+  font-weight:@font-swatch7-font-weight;
+  color: @font-swatch7-color;
+  letter-spacing: 3px;
+  font-size: .9em;
+  text-decoration: none;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+  text-transform: uppercase;
+
+  background: @color-swatch2; 
+  background: -moz-linear-gradient(top,  lighten(@color-swatch2,10%) 0%, @color-swatch2 100%); 
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch2,10%)), color-stop(100%,@color-swatch2)); 
+  background: -webkit-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
+  background: -o-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
+  background: -ms-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%);
+  background: linear-gradient(to bottom,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
+}
+
+.widget.profile form button:hover {
+  cursor: pointer;
+  background-color: @color-swatch2;
+}
+
 
 
 /* ===============================
@@ -1553,6 +1639,8 @@ hr.line.align-right {
 {
     background-color: @color-swatch2;
 }
+
+
 
 /* ===============================
    IPAD WIDTH

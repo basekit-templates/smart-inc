@@ -26,6 +26,9 @@
 </div>
 
 <div class="main wrapper clearfix">
+    <div id="featuregallery">
+        
+    </div>
     {{zone('main')|raw}}
 </div>
 
@@ -38,7 +41,7 @@
     <div class="wrapper clearfix">
         <div class="responsivecolumns columns-three-33-34-33">
             <div class="column columns-three-left">
-              {{widget('logo', 'footercolumn1logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                {{widget('logo', 'footercolumn1logo', {"defaultlogo": asset('images/logo.png')})|raw}}
                 {{widget('companyname', 'footercolumn1companyname', {"business": "Smart Inc."})|raw}}
             </div>
             <div class="column columns-three-middle">
@@ -47,8 +50,8 @@
             </div>
             <div class="column columns-three-right">
                 {{widget('content', 'footercolumn3content1', {"content":"<h4>CONTACTO</h4>"})|raw}}
-                {{widget('profile', 'footercolumn3profileEmail', { 'profileType':'email'})|raw}}
-                {{widget('profile', 'footercolumn3profilePhone', { 'profileType':'phone'})|raw}}
+                {{widget('profile', 'footercolumn3profileEmail', { 'profileType':'email', 'email':'profile'})|raw}}
+                {{widget('profile', 'footercolumn3profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}}
             </div>
         </div>
     </div>
@@ -56,10 +59,46 @@
 
 </div>
 
-{% endblock %}
-/div>
-</footer>
+<script src="{{asset('assets/isotape.js')}}"></script>
+<script>
 
-</div>
+(function ()
+{
+	// Add the niceScroll plugin to the iframe html element
+	$(document).ready(function ()
+	{
+        var featuregallery = $('#page-zones__template-widgets__gallery-featuregallery'),
+            timeout = null,
+            setuptimeout = null;
+
+        function setUpGallery() {
+            featuregallery.isotope({
+                itemSelector: 'li',
+                masonry: {}
+            });
+        }
+
+        featuregallery.on('prerender', function() {
+            featuregallery.isotope('destroy');
+        });
+
+        featuregallery.on('rendered', function(){
+            clearTimeout(setuptimeout);
+            setuptimeout = setTimeout(function() {
+                setUpGallery();
+            },1000);
+        });
+
+        window.addEventListener( 'resize', function() {
+            //clearTimeout(timeout);
+            //timeout = setTimeout(function() {
+                featuregallery.isotope('reLayout');
+            //},1000);
+        }, false );
+
+        setUpGallery();
+    });
+}());
+</script>
 
 {% endblock %}
