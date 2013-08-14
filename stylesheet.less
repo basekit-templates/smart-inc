@@ -83,6 +83,15 @@ p
   letter-spacing: @font-swatch5-letter-spacing;
 }
 
+ul, ol, li {
+  font-family:@font-swatch5-font-family;
+  font-size:@font-swatch5-font-size;
+  font-weight: @font-swatch5-font-weight;
+  line-height:@font-swatch5-line-height;
+  color:@font-swatch5-color;
+  letter-spacing: @font-swatch5-letter-spacing;
+}
+
 blockquote {
   background: lighten(@color-swatch5,20%);
   border-left:6px solid @color-swatch2;
@@ -222,10 +231,18 @@ header {
   margin-top: 10px;
 }
 
-.widget.companyname h1 {
-  margin: 0;
-  padding: 0;
-  letter-spacing: -1px;
+.widget.companyname a {
+  font-family:@font-swatch10-font-family;
+  font-weight: @font-swatch10-font-weight;
+  color:@font-swatch10-color;
+  line-height:@font-swatch10-line-height;
+  letter-spacing: @font-swatch10-letter-spacing;
+  font-size: @font-swatch10-font-size;
+}
+
+.widget.companyname a:hover {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* LOGO */
@@ -265,6 +282,10 @@ footer p, footer {
 }
 
 footer span {
+  color: @color-swatch1;
+}
+
+footer .widget.companyname a {
   color: @color-swatch1;
 }
 
@@ -488,7 +509,7 @@ footer span {
   /*letter-spacing: @font-swatch8-letter-spacing;*/
   letter-spacing: 2px;
   max-width: 580px;
-  margin: 0 auto 30px;
+  margin: 0 auto 10px;
 }
 
 /* FEATURE STRAPLINE */
@@ -507,7 +528,7 @@ footer span {
 
 .widget.feature button
 {
-  margin: 2.7em 0 0em;
+  margin: 2em 0 0em;
   padding: 17px 30px;
   border: 1px solid darken(@color-swatch3,2%);
   -webkit-border-radius: 3px;
