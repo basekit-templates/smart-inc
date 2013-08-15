@@ -1033,12 +1033,13 @@ hr.line.align-right {
 .widget.twitter .twitter-content {
   background-color: @color-swatch3;
   padding: 30px 30px 30px 100px;
-  background-image: image('/images/twitterwidget-bird.png');
+  background-image: image('/images/socialicons-twitter.svg');
+  background-size: 38px;
   background-repeat: no-repeat;
   background-position: 34px center;
 }
 
-.widget.twitter span, .widget.twitter time {
+.widget.twitter span, .widget.twitter time, .widget.twitter a {
   color: lighten(@color-swatch3,25%);
   font-size: 1.1em;
   text-transform: uppercase;
@@ -1269,56 +1270,74 @@ hr.line.align-right {
   box-shadow: inset 0 0 6px rgba(255,255,255,0.9);
 }
 
-/* ===============================
-   SOCIAL BAR WIDGET
+/* ==================================
+   SOCIAL BAR WIDGET / SOCIAL PROFILE
    =============================== */
 
-.widget.socialicons {
-  padding: 0px;
-  font-family:@font-swatch7-font-family;
+.widget.socialicons, .widget.profile .bk-profile-socialicons {
+    padding: 9px 0;
+    font-size:1em;
+    font-family:@font-swatch7-font-family;
 }
 
-.widget.socialicons a {
-  display: block;
-  margin: 0px 0px 12px;
-  height: 32px;
-  width: 32px;
-  text-decoration: none;
-  text-indent: -9999px;
+.widget.socialicons a, .widget.profile .bk-profile-socialicons a {
+    text-decoration: none;
+    text-indent: -9999px;
 }
 
-.widget.socialicons a:hover {
-  cursor: pointer;
-}
-
-.widget.socialicons span a {
+.widget.profile .bk-profile-socialicons span {
   display: inline-block;
-  margin-right: 12px;
-  background-repeat: no-repeat;
 }
 
-.widget.socialicons span.bk-socialicons-twitter a {
-  background-image: image('/images/socialicons-twitter.png');
+.widget.socialicons span a, .widget.profile .bk-profile-socialicons span a {
+    display: inline-block;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    background-size: 18px;
+    width: 32px;
+    height: 32px;
+    border: 1px solid darken(@color-swatch2,5%);
+    background-color: @color-swatch2;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
 }
 
-.widget.socialicons span.bk-socialicons-linkedin a {
-  background-image: image('/images/socialicons-linkedin.png');
+.widget.socialicons span a:hover, .widget.profile 
+.bk-profile-socialicons span a:hover {
+    background-color: @color-swatch2;
 }
 
-.widget.socialicons span.bk-socialicons-facebook a {
-  background-image: image('/images/socialicons-facebook.png');
+.widget.socialicons span.bk-socialicons-twitter a, 
+.widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
+    background-image: image('/images/socialicons-twitter.svg');
 }
 
-.widget.socialicons span.bk-socialicons-rss a {
-  background-image: image('/images/socialicons-rss.png');
+.widget.socialicons span.bk-socialicons-linkedin a, 
+.widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
+    background-image: image('/images/socialicons-linkedin.svg');
 }
 
-.widget.socialicons span.bk-socialicons-googleplus a {
-  background-image: image('/images/socialicons-googleplus.png');
+.widget.socialicons span.bk-socialicons-facebook a, 
+.widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
+    background-image: image('/images/socialicons-facebook.svg');
 }
 
-.widget.socialicons span.bk-socialicons-youtube a {
-  background-image: image('/images/socialicons-youtube.png');
+.widget.socialicons span.bk-socialicons-rss a, 
+.widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
+    background-image: image('/images/socialicons-rss.svg');
+}
+
+.widget.socialicons span.bk-socialicons-googleplus a, 
+.widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
+    background-image: image('/images/socialicons-googleplus.svg');
+}
+
+.widget.socialicons span.bk-socialicons-youtube a, 
+.widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
+    background-image: image('/images/socialicons-youtube.svg');
 }
 
 
@@ -1330,7 +1349,7 @@ hr.line.align-right {
   display: block;
   font-family: @font-swatch5-font-family;
   font-size: @font-swatch5-font-size;
-  font-weight: 300;
+  font-weight: @font-swatch5-font-weight;
   line-height: @font-swatch5-line-height;
   color: lighten(@font-swatch5-color,15%);
   letter-spacing: @font-swatch5-letter-spacing;
