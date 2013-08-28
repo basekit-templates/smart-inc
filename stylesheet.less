@@ -93,29 +93,33 @@ ul, ol, li {
 }
 
 blockquote {
-  background: lighten(@color-swatch5,20%);
-  border-left:6px solid @color-swatch2;
-  margin:0;
-  padding: 14px 16px;
+  margin: 20px 0;
   quotes:"\201C""\201D""\2018""\2019";
+  font-family:@font-swatch5-font-family;
+  font-size:@font-swatch5-font-size;
+  font-weight:@font-swatch5-font-weight;
+  line-height:@font-swatch5-line-height;
+  color:@font-swatch5-color;
 }
-  blockquote:before {
+
+blockquote:before {
   font-family: georgia;
-  color: @color-swatch2;
+  color: @font-swatch5-color;
   content:open-quote;
   font-size:4em;
   line-height:.1em;
   margin-right:.1em;
   vertical-align:-.4em;
 }
-  blockquote p {
-  display: inline;
-  font-style: italic;
-  font-family:@font-swatch5-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight:@font-swatch5-font-weight;
-  line-height:@font-swatch5-line-height;
-  color:@font-swatch5-color;
+
+blockquote:after {
+  font-family: georgia;
+  color: @font-swatch5-color;
+  content:close-quote;
+  font-size:4em;
+  line-height:.1em;
+  margin-left:.1em;
+  vertical-align:-.4em;
 }
 
 
@@ -758,10 +762,11 @@ footer .widget.companyname a {
    IMAGE WIDGET
    =============================== */
 
-.widget.image img
-{
-    display:block;
+.widget.image img {
+    display: block;
     max-width: 100%;
+    border: 0;
+    border-width: 0;
 }
 
 .widget.image {
@@ -1033,6 +1038,7 @@ hr.line.align-right {
 .widget.twitter .twitter-content {
   background-color: @color-swatch3;
   padding: 30px 30px 30px 100px;
+  background: image('/images/twitter.png');
   background-image: image('/images/socialicons-twitter.svg');
   background-size: 38px;
   background-repeat: no-repeat;
