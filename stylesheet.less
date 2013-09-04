@@ -1461,10 +1461,12 @@ hr.line.align-right {
   line-height: @font-swatch5-line-height;
   color: lighten(@font-swatch5-color,25%);
   letter-spacing: @font-swatch5-letter-spacing;
+  margin-bottom: 20px;
   text-indent: 16px;
   -webkit-border-radius: 3px;
    -moz-border-radius: 3px;
         border-radius: 3px;
+
 }
 
 .widget.profile form input:focus {
@@ -1608,7 +1610,6 @@ hr.line.align-right {
 .widget.responsiveslideshow .slideshow-widget .btn-prev, .widget.responsiveslideshow .slideshow-widget .btn-next{
   width: 72px;
   height: 72px;
-  top: 86%;
 }
 
 .widget.responsiveslideshow .slideshow-image-list {
@@ -1687,7 +1688,8 @@ hr.line.align-right {
   background-color: rgba(255, 255, 255, 0.3);
   height: 72px;
   position: relative;
-  top: -71px;
+  float: left;
+  width: 100%;
 }
 
 .widget.responsiveslideshow .slideshow-widget .btn-play
@@ -1709,7 +1711,7 @@ hr.line.align-right {
 {
   border: none;
   cursor: pointer;
-  background-color: @color-swatch1;
+  background-color: @color-swatch5;
   border-radius: 50%;
   width: 18px;
   height: 18px; 
@@ -1861,9 +1863,10 @@ hr.line.align-right {
         height: 350px;
     }
 
+
+
     .widget.responsiveslideshow .slideshow-widget .btn-prev, 
     .widget.responsiveslideshow .slideshow-widget .btn-next {
-        top: 79.8%; 
         background-size: 15px;
     }
 
@@ -1941,36 +1944,26 @@ hr.line.align-right {
 
   /* SLIDESHOW */
 
-    .widget.responsiveslideshow .slideshow-widget-wrapper, .widget.responsiveslideshow .slideshow-image-list {
-        height: 280px;
-    }
+  .widget.responsiveslideshow .title {
+    padding-bottom:13px;
+  }
 
-    .widget.responsiveslideshow .slideshow-widget-controls {
-        height: 62px;
-    }
+  .widget.responsiveslideshow .description {
+    display:none;
+  }
 
-    .widget.responsiveslideshow .slideshow-widget .btn-prev, 
-    .widget.responsiveslideshow .slideshow-widget .btn-next {
-        top: 77.6%;
-        background-size: 12px;
-    }
+  .widget.responsiveslideshow .slideshow-image-list {
+      height: 200px;
+  }
 
-    .widget.responsiveslideshow .slideshow-widget-controls .dot {
-        margin: 24px 5px;
-    }
+  .widget.responsiveslideshow .slideshow-widget-wrapper {
+    height: 250px;
+  }
 
-    .widget.responsiveslideshow .slideshow-widget .btn-prev, .widget.responsiveslideshow .slideshow-widget .btn-next {
-        width: 62px;
-        height: 62px;
-    }
-
-    .widget.responsiveslideshow .slideshow-widget-controls {
-        top: -62px;
-    }
-
-    .widget.responsiveslideshow .description {
-        display:none;
-    }
+  .widget.responsiveslideshow .slideshow-widget .btn-prev, 
+  .widget.responsiveslideshow .slideshow-widget .btn-next {
+    top: 25%;
+  }
 
 
   /* CLICK TO CALL */
