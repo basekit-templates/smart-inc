@@ -1,7 +1,7 @@
 @import "@{templateCommon}/basekit-bootstrap.less";
 
 body {
-  background-color: #b5c7d4;
+  background-color: @color-swatch7; 
   margin: 0;
   padding: 0;
 }
@@ -10,120 +10,6 @@ body {
   width: 90%;
   margin: 0 5%;
 }
-
-.canvas  {
-  background-color: @color-swatch1;
-  max-width: 1400px;
-  width: 90%;
-  margin: 0 auto;
-  padding: 0px;
-  box-shadow: 0 0 20px rgba(110,110,110,0.1);
-}
-
-a {
-  font-family:@font-swatch2-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight:@font-swatch5-font-weight;
-  color:@color-swatch3;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-h1, h2, h3, h4, h5, p {
-  margin: 0;
-}
-
-h1 {
-  font-family:@font-swatch1-font-family;
-  font-weight: @font-swatch1-font-weight;
-  color:@font-swatch1-color;
-  line-height:@font-swatch1-line-height;
-  letter-spacing: @font-swatch1-letter-spacing;
-  font-size: @font-swatch1-font-size;
-}
-
-h2
-{
-  font-family:@font-swatch2-font-family;
-  font-size: @font-swatch2-font-size;
-  font-weight: @font-swatch2-font-weight;
-  line-height:@font-swatch2-line-height;
-  color: @font-swatch2-color;
-  letter-spacing: @font-swatch2-letter-spacing;
-}
-
-h3
-{
-  font-family:@font-swatch3-font-family;
-  font-size:@font-swatch3-font-size;
-  font-weight: @font-swatch3-font-weight;
-  color: @font-swatch3-color;
-  line-height:@font-swatch3-line-height;
-  letter-spacing: @font-swatch3-letter-spacing;
-}
-
-h4
-{
-  font-family:@font-swatch4-font-family;
-  font-size:@font-swatch4-font-size;
-  font-weight:@font-swatch4-font-weight;
-  line-height:@font-swatch4-line-height;
-  color:@font-swatch4-color;
-  letter-spacing: @font-swatch4-letter-spacing;
-}
-
-p
-{
-  font-family:@font-swatch5-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight: @font-swatch5-font-weight;
-  line-height:@font-swatch5-line-height;
-  color:@font-swatch5-color;
-  letter-spacing: @font-swatch5-letter-spacing;
-}
-
-ul, ol, li {
-  font-family:@font-swatch5-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight: @font-swatch5-font-weight;
-  line-height:@font-swatch5-line-height;
-  color:@font-swatch5-color;
-  letter-spacing: @font-swatch5-letter-spacing;
-}
-
-blockquote {
-  margin: 20px 0;
-  quotes:"\201C""\201D""\2018""\2019";
-  font-family:@font-swatch5-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight:@font-swatch5-font-weight;
-  line-height:@font-swatch5-line-height;
-  color:@font-swatch5-color;
-}
-
-blockquote:before {
-  font-family: georgia;
-  color: @font-swatch5-color;
-  content:open-quote;
-  font-size:4em;
-  line-height:.1em;
-  margin-right:.1em;
-  vertical-align:-.4em;
-}
-
-blockquote:after {
-  font-family: georgia;
-  color: @font-swatch5-color;
-  content:close-quote;
-  font-size:4em;
-  line-height:.1em;
-  margin-left:.1em;
-  vertical-align:-.4em;
-}
-
 
 /* ===============================
    CUSTOM CSS
@@ -217,7 +103,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
    HEADER
    =============================== */
 
-header {
+header.bk-header {
   padding: 0;
   background-color: @color-swatch7;
 }
@@ -263,34 +149,34 @@ header {
    FOOTER
    =============================== */
 
-footer {
+footer.bk-footer {
   padding: 3em 0;
   background-color: darken(@color-swatch4,8%);
   color: @color-swatch1;
 }
 
-footer h1, footer h2, footer h3, footer h4 {
+footer.bk-footer h1, footer h2, footer h3, footer h4 {
   color: @color-swatch1;
   padding-bottom: 6px;
 }
 
-footer h4 {
+footer.bk-footer h4 {
   color: lighten@color-swatch2;
   letter-spacing: 2px;
 }
 
-footer p, footer {
+footer.bk-footer p, footer {
   font-family: @font-swatch5-font-family;
   color: lighten(@color-swatch5,10%);
   line-height:@font-swatch5-line-height;
   font-weight: 200;
 }
 
-footer span {
+footer.bk-footer span {
   color: @color-swatch1;
 }
 
-footer .widget.companyname a {
+footer.bk-footer .widget.companyname a {
   color: @color-swatch1;
 }
 
@@ -1269,6 +1155,72 @@ hr.line.align-right {
 
 
 /* ===============================
+  BLOG
+   =============================== */
+
+.widget {
+    &.bloglistposts {
+        .blog-post-item {
+            border-bottom: 1px solid @color-swatch5;
+            margin-bottom: 30px;
+        }
+
+    }
+}
+
+.blog-post-item {
+    margin: 1.5em 0;
+    padding-bottom: 1em;
+    h2 {
+        a {
+            font-family: @font-swatch2-font-family;
+            font-size: @font-swatch2-font-size;
+            font-weight: @font-swatch2-font-weight;
+            line-height: @font-swatch2-line-height;
+            color: @font-swatch2-color;
+            letter-spacing: @font-swatch2-letter-spacing;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.blog-post-metadata {
+    background-color: transparent;
+    background-image: none;
+    margin-top: 0;
+    text-align: left;
+}
+
+.blog-list-footer {
+    background-color: transparent;
+    background-image: none;
+}
+
+.blog-post-more-link {
+    float: left;
+    width: 100%;
+}
+
+/* BLOG SEARCH */
+.blogsearch {
+    form {
+        button {
+            padding: 10px;
+            color: @font-swatch7-color;
+            font-size: @font-swatch6-font-size;
+            font-weight: @font-swatch6-font-weight;
+            line-height: @font-swatch6-line-height;
+            background-color: @font-swatch7-background-color;
+            border: none;
+        }
+    }
+}
+
+
+/* ===============================
    TWEET THIS WIDGET
    =============================== */
 
@@ -1291,7 +1243,7 @@ hr.line.align-right {
     box-shadow: 0px 0px 10px rgba(255,255,255,0.7), inset 0px 2px 2px rgba(255,255,255,0.3);
   
     font-family: @font-swatch7-font-family;
-    font-weight:@font-swatch7-font-weight;
+    font-weight: inherit;
     color: @font-swatch7-color;
     letter-spacing: 3px;
     font-size: .9em;
