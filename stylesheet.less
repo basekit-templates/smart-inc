@@ -269,7 +269,6 @@ footer.bk-footer .widget.companyname a {
 .widget.extendednavigation ul li {
   float: left;
   display: block;
-  text-align: left!important;
 }
 
 .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
@@ -319,7 +318,6 @@ footer.bk-footer .widget.companyname a {
 .widget.extendednavigation li:hover > ul > li {
   display: block;
   width: 100%;
-  text-align: left!important;
   padding: 0 30px 0;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -1757,7 +1755,6 @@ hr.line.align-right {
 
     .widget.extendednavigation ul li .text, .widget.extendednavigation ul li.folder .text {
         padding-left: 20px;
-        background-image: image('/images/arrow-left.png');
         background-position: left center;
         background-repeat: no-repeat;
     }
@@ -1877,6 +1874,10 @@ hr.line.align-right {
   .widget.twitter .twitter-content {
     padding: 30px;
     background-image: none;
+  }
+  .widget .extendednavigation ul.align-right li.folder:after {
+    left: 5px;
+    right: inherit;
   }
 
 }
