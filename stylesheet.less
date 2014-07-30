@@ -1,9 +1,14 @@
 @import "@{templateCommon}/basekit-bootstrap.less";
 
+@import "@{templateLocal}/css/common-forms.less";
+@import "@{templateLocal}/css/widgets-blog.less";
+@import "@{templateLocal}/css/widgets-ecom.less";
+@import "@{templateLocal}/css/widgets-menu.less";
+
+@desktop: ~"only screen and (min-width : 769px)";
+
 body {
   background-color: @color-swatch7; 
-  margin: 0;
-  padding: 0;
 }
 
 .wrapper {
@@ -320,54 +325,6 @@ footer.bk-footer .widget.companyname a {
 
 
 /* ===============================
-   STANDARD NAVIGATION
-   =============================== */
-
-.widget.navigation {
-}
-
-.widget.navigation ul {
-  padding: 0;
-  margin: 20px 0 0;
-}
-
-.widget.navigation ul.align-center li
-{
-  text-align: center;
-}
-
-.widget.navigation ul.align-left li
-{
-  text-align: left;
-}
-
-.widget.navigation ul.align-right li
-{
-  text-align: right;
-}
-
-.widget.navigation ul li {
-  float: left;
-  display: block;
-  padding-right: 40px;
-}
-
-.widget.navigation ul li a {
-  display: block;
-  font-family:@font-swatch6-font-family;
-  font-size:@font-swatch6-font-size;
-  font-weight: @font-swatch6-font-weight;
-  color: @font-swatch6-color;
-  line-height:@font-swatch6-line-height;
-  letter-spacing: @font-swatch6-letter-spacing;
-}
-
-.widget.navigation ul li a:hover {
-  text-decoration: none;
-  color: @color-swatch3;
-}
-
-/* ===============================
    EXTENDED NAVIGATION
    =============================== */
 
@@ -393,22 +350,6 @@ footer.bk-footer .widget.companyname a {
   }
 }
 
-/* ALIGNMENTS */
-
-.widget.extendednavigation ul.align-center li, .widget.extendednavigation ul.align-center li:hover ul li {
-  text-align: center;
-}
-
-.widget.extendednavigation ul.align-left li, .widget.extendednavigation ul.align-left li:hover ul li
-{
-  text-align: left;
-}
-
-.widget.extendednavigation ul.align-right li, .widget.extendednavigation ul.align-right li:hover ul li
-{
-  text-align: right;
-}
-
 .widget.extendednavigation ul li {
   float: left;
   display: block;
@@ -432,8 +373,7 @@ footer.bk-footer .widget.companyname a {
 
 /* FOLDER */
 
-.widget.extendednavigation ul li.folder {
-}
+
 
 .widget.extendednavigation ul li.folder .text:hover {
   color: @color-swatch3;
@@ -489,25 +429,10 @@ footer.bk-footer .widget.companyname a {
     float: none;
 }
 
-.main .widget.extendednavigation:before,
-.main .widget.extendednavigation:after {
-  content: " ";
-  display: table;
-}
-.main .widget.extendednavigation:after {
-  clear: both;
-}
-.main .widget.extendednavigation {
-  *zoom: 1;
-}
 
 /* ===============================
    FEATURE
    =============================== */
-
- .widget.feature {
-
-}
 
 .widget.feature .feature-bgimg {
   height: 500px;
@@ -588,193 +513,13 @@ footer.bk-footer .widget.companyname a {
   cursor: pointer;
 }
 
-.widget.feature button:active {
-  box-shadow: inset 0 0 6px rgba(255,255,255,0.9);
-}
-
-.widget.feature button.btn.justifyleft
-{
-    text-align: left;
-}
-
-.widget.feature button.btn.justifycenter
-{
-    text-align: center;
-}
-
-.widget.feature button.btn.justifyright
-{
-    text-align: right;
-}
-
-.widget.feature button.btn.justifyfull
-{
-    text-align: justify;
-}
-
-.widget.feature button.btn.italic {
-    font-style: italic;
-}
-
-.widget.feature button.btn.bold {
-    font-weight: bold;
-}
 
 .widget.feature button span {
-    vertical-align: center;
-}
-
-.widget.feature button i {
-    margin-right: 5px;
-}
-
-/* ===============================
-   FEATURE LAYOUTS
-   =============================== */
-
-/* LEFT ALIGN */
-
-.widget.feature.align-left .content {
-  width: 100%;
-  text-align: left;
-}
-
-/* CENTER ALIGN */
-
-.widget.feature.align-center .content {
-  width: 100%;
-  text-align: center;
-}
-
-/* RIGHT ALIGN */
-
-.widget.feature.align-right .content {
-  width: 100%;
-  text-align: right;
-}
-
-/* ===============================
-   PAYPAL BUTTON
-   =============================== */
-
-
-.widget.paypalbuynow .widget.button.paypal {
-  background-size: 18px;
-  background-color: @color-swatch2;
-  border: 1px solid darken(@color-swatch2,2%);
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  box-shadow: 0px 0px 10px rgba(255,255,255,0.7), inset 0px 2px 2px rgba(255,255,255,0.3);
-  letter-spacing: 3px;
-  font-size: .9em;
-  text-decoration: none;
-  text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
-}
-
-/* ===============================
-   DROPBOX BUTTON
-   =============================== */
-
-.widget.dropbox .b-wrap .btn {
-  padding: 14px 16px 14px 45px;
-  background-size: 18px;
-  background-color: @color-swatch2;
-  border: 1px solid darken(@color-swatch2,2%);
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  box-shadow: 0px 0px 10px rgba(255,255,255,0.7), inset 0px 2px 2px rgba(255,255,255,0.3);
-  letter-spacing: 3px;
-  font-size: .9em;
-  text-decoration: none;
-  text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+    vertical-align: baseline;
 }
 
 
-/* ===============================
-   BUTTON CSS
-   =============================== */
 
-.widget.button {
-    padding: 0;
-}
-
-.widget.button button
-{
-  margin: 0;
-  padding: 13px 22px;
-  border: 1px solid darken(@color-swatch2,2%);
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  box-shadow: 0px 0px 10px rgba(255,255,255,0.7), inset 0px 2px 2px rgba(255,255,255,0.3);
-
-  font-family: @font-swatch7-font-family;
-  font-weight:@font-swatch7-font-weight;
-  color: @font-swatch7-color;
-  letter-spacing: 3px;
-  font-size: .9em;
-  text-decoration: none;
-  text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
-
-  background: @color-swatch2; 
-  background: -moz-linear-gradient(top,  lighten(@color-swatch2,10%) 0%, @color-swatch2 100%); 
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch2,10%)), color-stop(100%,@color-swatch2)); 
-  background: -webkit-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
-  background: -o-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
-  background: -ms-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%);
-  background: linear-gradient(to bottom,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
-}
-
-.widget.button button:hover 
-{
-  background: @color-swatch2; 
-  cursor: pointer;
-}
-
-.widget.button button:active {
-  box-shadow: inset 0 0 6px rgba(255,255,255,0.9);
-}
-
-
-/* JUSTIFY */
-
-.widget.button button.btn.justifyleft
-{
-    text-align: left;
-}
-
-.widget.button button.btn.justifycenter
-{
-    text-align: center;
-}
-
-.widget.button button.btn.justifyright
-{
-    text-align: right;
-}
-
-.widget.button button.btn.justifyfull
-{
-    text-align: justify;
-}
-
-.widget.button button.btn.italic {
-    font-style: italic;
-}
-
-.widget.button button.btn.bold {
-    font-weight: bold;
-}
-
-.widget.button span {
-    vertical-align: center;
-}
-
-.widget.button i {
-    margin-right: 5px;
-}
 
 /* ===============================
    CONTENT CSS
@@ -992,71 +737,39 @@ hr.line {
    border: none;
 }
 
-hr.line.align-left {
-   margin: 20px auto 20px 0px;
-}
-
-hr.line.align-center {
-   margin: 20px auto;
-}
-
-hr.line.align-right {
-   margin: 20px 0px 20px auto;
-}
-
-
 /* ===============================
-   CLICK TO CALL WIDGET
+   CLICK TO CALL - ONLY SHOWS IN IPHONE
    =============================== */
 
+
+
 .widget.clicktocall {
-   
+  a, a:hover {
+    padding: 0 1.6em;
+    padding-left: 50px;
+    background-position: 18px center;
+    background-image: image('/images/ic-desktop-call-mob.png');
+    background-repeat: no-repeat;
+    @media @desktop {
+      padding: 0;
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      color: @font-swatch5-color;
+      background: transparent;
+      text-shadow: none;
+      letter-spacing: 0;
+      font-size: @font-swatch5-font-size;
+      height: auto;
+      line-height: @font-swatch5-line-height;
+      cursor: default;
+
+    }
+  }
+
 }
 
-.widget.clicktocall a {
-  
-  font-family: @font-swatch5-font-family;
-  font-weight:@font-swatch5-font-weight;
-  color: @font-swatch5-color;
-  letter-spacing: @font-swatch5-letter-spacing;
-  font-size: @font-swatch5-font-size;
-  text-decoration: none;
-}
 
-.widget.clicktocall a:hover {
-  cursor: pointer;
-}
-
-
-/* CLICK TO CALL - JUSTIFY */
-
-.widget.clicktocall a.justifyleft
-{
-    text-align: left;
-}
-
-.widget.clicktocall a.justifycenter
-{
-    text-align: center;
-}
-
-.widget.clicktocall a.justifyright
-{
-    text-align: right;
-}
-
-.widget.clicktocall a.justifyfull
-{
-    text-align: justify;
-}
-
-.widget.clicktocall a.italic {
-    font-style: italic;
-}
-
-.widget.clicktocall a.bold {
-    font-weight: bold;
-}
 
 /* ===============================
    REDIRECT WIDGET
@@ -1094,318 +807,122 @@ hr.line.align-right {
    =============================== */
 
 
+
+
+
+
+
+
+@twitterProfilePicSize: 98px;
+
 .widget.twitter {
   padding: 20px;
-  margin: 0 0 2px;
   background-color: lighten(@color-swatch5,46%);
+
+  ul.twitter {
+     background-color: @color-swatch3;
+     padding: 10px 10px 0 10px;
+    
+    li {
+      position: relative;
+      min-height:110px;
+      border-bottom: 2px solid darken(@color-swatch3,10%);
+      margin-bottom: 10px;
+      &:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+     
+      // footer
+      a, time + span, time {
+        font-size: bkscale(@font-swatch5-font-size, 0.8);
+        font-family: @font-swatch5-font-family;
+        line-height: 1;
+        font-weight: normal;
+        color: fade(@color-swatch1,70%);
+        text-decoration: none;
+        @media @mobile {
+          font-size: bkscale(@font-swatch5-font-size, 0.6);
+        }
+      }
+      // profile pic
+      .twitter-profile-pic {
+        width: @twitterProfilePicSize;
+        height: @twitterProfilePicSize;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        @media @mobile {
+          width: (@twitterProfilePicSize * 0.55);
+          height: (@twitterProfilePicSize * 0.55);
+        }
+        
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+      .twitter-content {
+        line-height: 1.2em;
+        margin-left: (@twitterProfilePicSize + 20);
+        @media @mobile {
+          margin-left: (@twitterProfilePicSize * 0.55 + 12);
+        }
+        .bk-full-name {
+           color: @color-swatch1;
+          font-size: bkscale(@font-swatch5-font-size, 1);
+          @media @mobile {
+            font-size: bkscale(@font-swatch5-font-size, 0.8);
+          }
+        }
+        p {
+          font-family: @font-swatch5-font-family;
+          color: @color-swatch1;
+          a {
+            font-family: @font-swatch5-font-family;
+            font-size: @font-swatch5-font-size;
+            color: @color-swatch3;
+            line-height: @font-swatch5-line-height;
+          }
+        }
+      }
+    }
+  }
 }
 
-.widget.twitter p {
-  font-size: 16px;
-  font-weight: 200;
-  line-height: 1.6em;
-  color: @color-swatch1;
-  letter-spacing: 0.09em;
-  padding-bottom: 14px;
-}
 
-.svg .widget.twitter .twitter-content {
-  background-color: @color-swatch3;
-  padding: 30px 30px 30px 30px;
-}
 
-.widget.twitter .twitter-content {
-}
-
-.widget.twitter span, .widget.twitter time, .widget.twitter a {
-  color: lighten(@color-swatch3,25%);
-  font-size: 1.1em;
-  letter-spacing: 2px;
-}
-
-.widget.twitter img {
-  display: none;
-}
-
-.widget.twitter ul {
-    padding: 0px;
-    margin: 0;
-    background-color: @color-swatch3;
-}
-
-.widget.twitter ul li {
-    list-style: none;
-    font-family: @font-swatch5-font-family;
-    font-size: .6em;
-    color: @font-swatch5-color;
-    border-bottom: 2px solid darken(@color-swatch3,10%);
-}
-
-.widget.twitter ul li:last-child {
-  border-bottom: 0;
-}
-
-.widget.twitter .twitter-profile-pic a {
-  border-bottom: 0;
-  padding-bottom: 0;
-}
-
-.widget.twitter .twitter-content span.bk-full-name {
-    display: none;
-}
 
 /* ===============================
    CONTACT FORM WIDGET
    =============================== */
 
-.widget.contactform form {
+.contactform.widget {
+  form {
     display: block;
     padding: 20px;
     margin: 0;
     background-color: lighten(@color-swatch5,46%);
-}
-
-.widget.contactform fieldset {
+  }
+  .form-group {
+    margin-bottom: 1em;
+  }
+  fieldset {
     border: none;
     padding: 0;
     background-color: @color-swatch1;
     padding: 30px;
     box-shadow: 0px 0px 10px rgba(110,110,110,0.1);
-}
-
-.widget.contactform fieldset label {
-    width: 100%;
-    float: left;
-    font-family:@font-swatch1-font-family;
-    font-size:font-swatch4-font-size;
-    font-weight:@font-swatch4-font-weight;
-    line-height:@font-swatch4-line-height;
-    color:@color-swatch4;
-    letter-spacing: @font-swatch4-letter-spacing;
-}
-
-.widget.contactform fieldset input {
-    height: 50px;
-    width: 50%;
-    background-color: darken(@color-swatch1,5%);
-    border: none;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-    text-indent: 12px;
-    margin-top: 6px;
-    margin-bottom: 30px;
-}
-
-.widget.contactform fieldset textarea {
-    height: 132px;
-    width: 100%;
-    background-color: darken(@color-swatch1,5%);
-    border: none;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-    text-indent: 8px;
-    padding-top: 14px;
-    margin-top: 6px;
-    margin-bottom: 20px;
-    resize: none;
-}
-
-.widget.contactform fieldset input:focus, .widget.contactform fieldset textarea:focus {
-  outline: none;
-}
-
-/* PLACEHOLDER CSS */
-
-::-webkit-input-placeholder { /* WebKit browsers */
-    color:    lighten(@color-swatch5,20%);
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    lighten(@color-swatch5,20%);
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    lighten(@color-swatch5,20%);
-}
-:-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:    lighten(@color-swatch5,20%);
-}
-
-.widget.contactform fieldset button.btn {
-  margin: 0;
-  padding: 12px 20px;
-  border: 1px solid darken(@color-swatch2,2%);
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  box-shadow: 0px 0px 10px rgba(255,255,255,0.7), inset 0px 2px 2px rgba(255,255,255,0.3);
-
-  font-family: @font-swatch7-font-family;
-  font-weight:@font-swatch7-font-weight;
-  color: @font-swatch7-color;
-  letter-spacing: 2px;
-  font-size: .8em;
-  text-decoration: none;
-  text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
-
-  background: @color-swatch3; 
-  background: -moz-linear-gradient(top,  lighten(@color-swatch2,10%) 0%, @color-swatch2 100%); 
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch2,10%)), color-stop(100%,@color-swatch2)); 
-  background: -webkit-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
-  background: -o-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
-  background: -ms-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%);
-  background: linear-gradient(to bottom,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
-}
-  
-.widget.contactform fieldset button.btn:hover {
-  background: @color-swatch2; 
-  cursor: pointer;
-}
-
-.widget.contactform fieldset button.btn:active {
-  box-shadow: inset 0 0 6px rgba(255,255,255,0.9);
-}
-
-.widget.contactform fieldset button.btn.justifyleft
-{
-    text-align: left;
-}
-
-.widget.contactform fieldset button.btn.justifycenter
-{
-    text-align: center;
-}
-
-.widget.contactform fieldset button.btn.justifyright
-{
-    text-align: right;
-}
-
-.widget.contactform fieldset button.btn.justifyfull
-{
-    text-align: justify;
-}
-
-.widget.contactform fieldset button.btn.italic {
-    font-style: italic;
-}
-
-.widget.contactform fieldset button.btn.bold {
-    font-weight: bold;
-}
-
-
-/* ===============================
-  BLOG
-   =============================== */
-
-.widget {
-    &.blogpostlist {
-        .blog-post-item {
-            border-bottom: 1px solid @color-swatch5;
-            margin-bottom: 30px;
-        }
-
-    }
-}
-
-.blog-post-item {
-    margin: 1.5em 0;
-    padding-bottom: 1em;
-    h2 {
-        a {
-            font-family: @font-swatch2-font-family;
-            font-size: @font-swatch2-font-size;
-            font-weight: @font-swatch2-font-weight;
-            line-height: @font-swatch2-line-height;
-            color: @font-swatch2-color;
-            letter-spacing: @font-swatch2-letter-spacing;
-            text-decoration: none;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-}
-
-.blog-post-metadata {
-    background-color: transparent;
-    background-image: none;
-    margin-top: 0;
-    text-align: left;
-}
-
-.blog-list-footer {
-    background-color: transparent;
-    background-image: none;
-}
-
-.blog-post-more-link {
-    float: left;
-    width: 100%;
-}
-
-/* BLOG SEARCH */
-.blogsearch {
-    form {
-        button {
-            padding: 10px;
-            color: @font-swatch7-color;
-            font-size: @font-swatch6-font-size;
-            font-weight: @font-swatch6-font-weight;
-            line-height: @font-swatch6-line-height;
-            background-color: @font-swatch7-background-color;
-            border: none;
-        }
-    }
-}
-
-
-/* ===============================
-   TWEET THIS WIDGET
-   =============================== */
-
-.widget.tweet {
-   padding: 0px; 
-}
-
-.widget.tweet .tweet {
-    padding: 14px 0;
-}
-
-.widget.tweet a {
     margin: 0;
-    padding: 13px 13px 13px 46px;
-    margin: 1em 0em;
-    border: 1px solid darken(@color-swatch2,2%);
-    -webkit-border-radius: 3px;
-       -moz-border-radius: 3px;
-            border-radius: 3px;
-    box-shadow: 0px 0px 10px rgba(255,255,255,0.7), inset 0px 2px 2px rgba(255,255,255,0.3);
-  
-    font-family: @font-swatch7-font-family;
-    font-weight: inherit;
-    color: @font-swatch7-color;
-    letter-spacing: 3px;
-    font-size: .9em;
-    text-decoration: none;
-    text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
-    background-color: @color-swatch2; 
-    background-image: image('/images/twitter.png');
-    background-size: 20px; 
-    background-repeat: no-repeat;
-    background-position: 16px center;
+  }
 }
 
-.widget.tweet a:hover {
-  background-image: image('/images/twitter.png');
-  background-color: @color-swatch2; 
-  cursor: pointer;
-}
 
-.widget.tweet a:active {
-  box-shadow: inset 0 0 6px rgba(255,255,255,0.9);
-}
+
+
+
 
 /* ==================================
    SOCIAL BAR WIDGET / SOCIAL PROFILE
@@ -1419,8 +936,9 @@ hr.line.align-right {
 
 .widget.socialicons a, .widget.profile .bk-profile-socialicons a {
     text-decoration: none;
-    text-indent: -9999px;
+    text-indent: 9999px;
     white-space: nowrap;
+    overflow: hidden;
 }
 
 .widget.profile .bk-profile-socialicons span {
@@ -1582,58 +1100,9 @@ hr.line.align-right {
   letter-spacing: @font-swatch5-letter-spacing;
 }
 
-.widget.profile form input {
-  height: 42px;
-  background-color: darken(@color-swatch4,3%);
-  border: 1px solid darken(@color-swatch4,13%);
-  font-family: @font-swatch5-font-family;
-  font-size: @font-swatch5-font-size;
-  font-weight: 300;
-  line-height: @font-swatch5-line-height;
-  color: lighten(@font-swatch5-color,25%);
-  letter-spacing: @font-swatch5-letter-spacing;
-  margin-bottom: 20px;
-  text-indent: 16px;
-  -webkit-border-radius: 3px;
-   -moz-border-radius: 3px;
-        border-radius: 3px;
 
-}
 
-.widget.profile form input:focus {
-  outline: none;
-}
 
-.widget.profile form button {
-  margin: 0;
-  padding: 12px;
-  border: 1px solid darken(@color-swatch2,2%);
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  box-shadow: inset 0px 2px 2px rgba(255,255,255,0.3);
-
-  font-family: @font-swatch7-font-family;
-  font-weight:@font-swatch7-font-weight;
-  color: @font-swatch7-color;
-  letter-spacing: 3px;
-  font-size: .9em;
-  text-decoration: none;
-  text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
-
-  background: @color-swatch2; 
-  background: -moz-linear-gradient(top,  lighten(@color-swatch2,10%) 0%, @color-swatch2 100%); 
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch2,10%)), color-stop(100%,@color-swatch2)); 
-  background: -webkit-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
-  background: -o-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
-  background: -ms-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%);
-  background: linear-gradient(to bottom,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
-}
-
-.widget.profile form button:hover {
-  cursor: pointer;
-  background-color: @color-swatch2;
-}
 
 
 
@@ -1675,57 +1144,9 @@ hr.line.align-right {
     letter-spacing: @font-swatch4-letter-spacing;
 }
 
-.widget.signupform fieldset input {
-    height: 42px;
-    background-color: lighten(@color-swatch5,46%);
-    border: 1px solid lighten(@color-swatch5,40%);
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-    text-indent: 12px;
-    -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-}
 
-.widget.signupform fieldset input:focus {
-  outline: none;
-}
 
-.widget.signupform button {
-  margin: 0;
-  padding: 3px 22px;
-  border: 1px solid darken(@color-swatch2,2%);
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  box-shadow: 0px 0px 10px rgba(255,255,255,0.7), inset 0px 2px 2px rgba(255,255,255,0.3);
 
-  font-family: @font-swatch7-font-family;
-  font-weight:@font-swatch7-font-weight;
-  color: @font-swatch7-color;
-  letter-spacing: 3px;
-  font-size: .9em;
-  text-decoration: none;
-  text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
-
-  background: @color-swatch2; 
-  background: -moz-linear-gradient(top,  lighten(@color-swatch2,10%) 0%, @color-swatch2 100%); 
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch2,10%)), color-stop(100%,@color-swatch2)); 
-  background: -webkit-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
-  background: -o-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
-  background: -ms-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%);
-  background: linear-gradient(to bottom,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
-}
-
-.widget.signupform button:hover {
-  cursor: pointer;
-  background-color: @color-swatch2;
-}
-
-.widget.signupform button:active {
-  box-shadow: inset 0 0 6px rgba(255,255,255,0.9);
-}
 
 
 /* ===============================
@@ -1998,9 +1419,7 @@ hr.line.align-right {
 
     /* FORMS */
 
-    .widget.contactform fieldset input {
-        width: 100%;
-    }
+
 
     .widget.signupform label {
         width: 100%;
@@ -2090,51 +1509,7 @@ hr.line.align-right {
   }
 
 
-  /* CLICK TO CALL */
-
-  .widget.clicktocall {
-    padding: 15px 0;
-  }
   
-  .widget.clicktocall a {
-      margin: 0;
-      padding: 13px 13px 13px 34px;
-      margin: 1em 0em;
-      border: 1px solid darken(@color-swatch2,2%);
-      -webkit-border-radius: 3px;
-         -moz-border-radius: 3px;
-              border-radius: 3px;
-      box-shadow: 0px 0px 10px rgba(255,255,255,0.7), inset 0px 2px 2px rgba(255,255,255,0.3);
-    
-      font-family: @font-swatch7-font-family;
-      font-weight:@font-swatch7-font-weight;
-      color: @font-swatch7-color;
-      letter-spacing: 3px;
-      font-size: .9em;
-      text-decoration: none;
-      text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
-    
-      background: image('/images/ic-phone.png'), @color-swatch2; 
-      background: image('/images/ic-phone.png'), -moz-linear-gradient(top,  lighten(@color-swatch2,10%) 0%, @color-swatch2 100%); 
-      background: image('/images/ic-phone.png'), -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch2,10%)), color-stop(100%,@color-swatch2)); 
-      background: image('/images/ic-phone.png'), -webkit-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
-      background: image('/images/ic-phone.png'), -o-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
-      background: image('/images/ic-phone.png'), -ms-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%);
-      background: image('/images/ic-phone.png'), linear-gradient(to bottom,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%);
-      background-repeat: no-repeat;
-      background-position: left center;
-    }
-    
-    .widget.clicktocall a:hover {
-        background-image: image('/images/ic-phone.png');
-        background-color: @color-swatch2; 
-        cursor: pointer;
-    }
-    
-    .widget.clicktocall a:active {
-      box-shadow: inset 0 0 6px rgba(255,255,255,0.9);
-    }
-
 
    /* GALLERY */
 
