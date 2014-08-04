@@ -4,7 +4,6 @@
 
 // ======= Widget: BlogSearch
 .widget.blogsearch {
-	
     form {
 		.form-group {
 			// Flex
@@ -55,7 +54,12 @@
 		    -ms-flex-item-align: auto;
 		    align-self: auto;
 		    // Appearance
-		    margin-right: 1em;	   
+		    margin-right: 1em;
+		    margin-bottom: 0;	   
+
+		    @media @mobile {
+		    	width: 100%;
+		    }
         }
         input {  
         	// Flex
@@ -106,16 +110,17 @@
 		
 		.blog-post-item {
 			.clearfix;
-			border-bottom: 1px solid @color-swatch2;
+			border-bottom: 1px dotted @color-swatch5;
 			position: relative;
-			margin-bottom: 30px;
+			margin-bottom: 70px;
 			padding-bottom: 30px;
 			@media @mobile {
 				margin-bottom: 20px;
 			}
 
 			.blog-post-feature-image-wrap {
-				height: 370px;
+				height: 0;
+				padding-bottom: 40%;
 				background-size: cover;
 				background-position: center;
 				z-index: 1000;
@@ -242,7 +247,7 @@
 			time.blog-post-publish-date {
 				color: @color-swatch5;
 				font-size: @font-swatch5-font-size;
-				border-bottom: 1px solid  lighten(@color-swatch5,20%);
+				border-bottom: 1px solid  fade(@color-swatch5,20%);
 				display: block;
 				float: right;
 				width: 30%;
@@ -257,7 +262,7 @@
 			}
 			// Category
 			div.blog-post-category {
-				border-bottom: 1px solid  lighten(@color-swatch5,20%);
+				border-bottom: 1px solid  fade(@color-swatch5,20%);
 				float: right;
 				width: 30%;
 				padding: 1em 0;
@@ -301,10 +306,11 @@
 						a {
 							display: inline-block;
 							padding: 0em 0.7em;
-							border-radius: 5px;
 							background-color: @font-swatch7-background-color;
 							color: @font-swatch7-color;
 							letter-spacing: 1px;
+							border-radius: 3px;
+							box-shadow: 0px 2px 0px darken(@color-swatch3,10%);
 
 							&:hover {
 								text-decoration: none;
@@ -335,6 +341,7 @@
 				background-color: transparent;
 				border: 2px solid mix(@color-swatch3, #fff, 12%);
 				margin-right: 0.4em;
+				box-shadow: none;
 
 				@media @mobile {
 					width: 40px;
