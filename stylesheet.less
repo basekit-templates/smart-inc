@@ -336,7 +336,7 @@ footer.bk-footer .widget.companyname a {
 
 .widget.extendednavigation {
   position: relative;
-  margin: 20px 0;
+  margin: 20px 0 20px 60px;
   li.selected {
     .text {
       color: @color-swatch3;
@@ -363,7 +363,6 @@ footer.bk-footer .widget.companyname a {
 
 .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
   display: block;
-  padding: 12px 30px;
   font-family:@font-swatch6-font-family;
   font-size:@font-swatch6-font-size;
   font-weight: @font-swatch6-font-weight;
@@ -407,7 +406,7 @@ footer.bk-footer .widget.companyname a {
 .widget.extendednavigation li:hover > ul > li {
   display: block;
   width: 100%;
-  padding: 0 30px 0;
+  padding: 0 10px 0;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;         /* Opera/IE 8+ */
@@ -420,10 +419,17 @@ footer.bk-footer .widget.companyname a {
 
 
 .widget.extendednavigation ul li:hover > ul li .text {
-  padding: 0 0 0 16px;
-  background-image: image('/images/arrow-left.png');
-  background-position: left center;
-  background-repeat: no-repeat;
+  // padding: 0 0 0 16px;
+  // background-image: image('/images/arrow-left.png');
+  // background-position: left center;
+  // background-repeat: no-repeat;
+  &:before {
+    padding: 0 0 0 16px;
+    content: "";
+    background-image: image('/images/arrow-left.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
 }
 
 
@@ -1425,14 +1431,17 @@ hr.line {
         }
     }
 
-    .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
+    .widget.extendednavigation ul li a {
         padding: 12px 0;
     }
 
-    .widget.extendednavigation ul li .text, .widget.extendednavigation ul li.folder .text {
-        padding-left: 20px;
+    .widget.extendednavigation ul li .text {
         background-position: left center;
         background-repeat: no-repeat;
+    }
+
+    .widget.extendednavigation ul li.folder {
+        padding: 12px 0px;
     }
 
     .widget.extendednavigation ul li > ul {
@@ -1453,11 +1462,15 @@ hr.line {
         padding: 0 30px;
     }
 
-    .widget.extendednavigation ul li:hover > ul li .text, .widget.extendednavigation ul li:hover > ul li.folder .text {
-        background-image: image('/images/arrow-left-gr.png');
-        background-position: left center;
-        background-repeat: no-repeat;
+    .widget .extendednavigation li > .text {
+      padding: 0 20px 0 0;
     }
+
+    // .widget.extendednavigation ul li:hover > ul li .text, .widget.extendednavigation ul li:hover > ul li.folder .text {
+    //     background-image: image('/images/arrow-left-gr.png');
+    //     background-position: left center;
+    //     background-repeat: no-repeat;
+    // }
 
     /* EXTENDED NAVIGATION - INSIDE ZONE */
 
