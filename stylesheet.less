@@ -310,7 +310,6 @@ footer.bk-footer h1, footer h2, footer h3, footer h4 {
 
 footer.bk-footer h4 {
   color: lighten@color-swatch2;
-  letter-spacing: 2px;
 }
 
 footer.bk-footer p, footer {
@@ -325,8 +324,10 @@ footer.bk-footer span {
   color: @color-swatch1;
 }
 
-footer.bk-footer .widget.companyname a {
-  color: @color-swatch1;
+footer.bk-footer .widget.companyname a,
+footer.bk-footer .widget.profile,
+footer.bk-footer .widget.profile span {
+  color: lighten(@color-swatch5,10%);
 }
 
 
