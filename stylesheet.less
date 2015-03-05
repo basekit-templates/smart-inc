@@ -27,7 +27,7 @@ body {
    =============================== */
 
 .main {
-  padding: 0px 0px 40px;
+  padding: 40px 0;
 }
 
 body.edit .widget.navigation, body.edit .widget.extendednavigation {
@@ -116,7 +116,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
 .bk-header {
     background-color: transparent;
-    border-bottom: 1px solid darken(@color-swatch2,10%);
     padding-bottom: 33px;
     .wrapper {
     padding: 20px 0;
@@ -315,6 +314,7 @@ footer.bk-footer h4 {
 }
 
 footer.bk-footer p, footer {
+  padding-bottom: 0;
   font-family: @font-swatch5-font-family;
   color: lighten(@color-swatch5,10%);
   line-height:@font-swatch5-line-height;
@@ -471,7 +471,7 @@ footer.bk-footer .widget.companyname a {
 
 .widget.feature h2 {
   max-width: 580px;
-  margin: 0 auto 10px;
+  margin: 0 auto;
 }
 
 /* FEATURE BUTTON */
@@ -484,7 +484,6 @@ footer.bk-footer .widget.companyname a {
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
-  box-shadow: 0px 0px 10px rgba(255,255,255,0.7), inset 0px 2px 2px rgba(255,255,255,0.3);
 
   font-family: @font-swatch7-font-family;
   font-weight:@font-swatch7-font-weight;
@@ -741,14 +740,16 @@ hr.line {
   background-color: lighten(@color-swatch5,46%);
 
   ul.twitter {
-     background-color: @color-swatch3;
-     padding: 10px 10px 0 10px;
-    
+     padding: 20px;
+     background-color: @color-swatch1;
+     box-shadow: 0px 0px 10px rgba(110,110,110,0.1);
+
     li {
       position: relative;
       min-height:110px;
-      border-bottom: 2px solid darken(@color-swatch3,10%);
-      margin-bottom: 10px;
+      border-bottom: 1px solid lighten(@color-swatch5,40%);
+      margin-bottom: 30px;
+      padding: 0 10px 20px;
       @media @mobile {
         min-height: 80px;
       }
@@ -756,14 +757,22 @@ hr.line {
         border-bottom: none;
         margin-bottom: 0;
       }
-     
+      a {
+        color: @color-swatch3;
+      }
+      .bk-full-name {
+        font-size: 17px;
+      }
+
+      p {
+        padding-bottom: 6px;
+      }
+
       // footer
       a, time + span, time {
         font-size: bkscale(@font-swatch5-font-size, 0.8);
         font-family: @font-swatch5-font-family;
-        line-height: 1;
         font-weight: normal;
-        color: fade(@color-swatch1,70%);
         text-decoration: none;
         @media @mobile {
           font-size: bkscale(@font-swatch5-font-size, 0.6);
@@ -793,23 +802,6 @@ hr.line {
         margin-left: (@twitterProfilePicSize + 20);
         @media @mobile {
           margin-left: (@twitterProfilePicSize * 0.55 + 12);
-        }
-        .bk-full-name {
-           color: @color-swatch1;
-          font-size: bkscale(@font-swatch5-font-size, 1);
-          @media @mobile {
-            font-size: bkscale(@font-swatch5-font-size, 0.8);
-          }
-        }
-        p {
-          font-family: @font-swatch5-font-family;
-          color: @color-swatch1;
-          a {
-            font-family: @font-swatch5-font-family;
-            font-size: @font-swatch5-font-size;
-            color: @color-swatch3;
-            line-height: @font-swatch5-line-height;
-          }
         }
       }
     }
