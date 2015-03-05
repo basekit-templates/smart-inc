@@ -1423,14 +1423,17 @@ hr.line {
         display: none!important;
     }
 
-    .widget.extendednavigation ul li:hover > ul {
+    .widget .extendednavigation ul li:hover > ul {
         display: block!important;
         width: 100%;
-        border: 1px solid lighten(@color-swatch3,35%);
     }
 
     .widget.extendednavigation ul li:hover > ul  {
         margin-top: 0;
+    }
+
+    .widget .extendednavigation ul li, .widget .navigation ul li {
+      border-bottom: 1px solid lighten(@color-swatch5,40%);
     }
 
     .widget.extendednavigation ul li:hover > ul li {
@@ -1440,12 +1443,6 @@ hr.line {
     .widget .extendednavigation li > .text {
       padding: 0 20px 0 0;
     }
-
-    // .widget.extendednavigation ul li:hover > ul li .text, .widget.extendednavigation ul li:hover > ul li.folder .text {
-    //     background-image: image('/images/arrow-left-gr.png');
-    //     background-position: left center;
-    //     background-repeat: no-repeat;
-    // }
 
     /* EXTENDED NAVIGATION - INSIDE ZONE */
 
@@ -1457,11 +1454,11 @@ hr.line {
 
   .widget.feature h2 {
     font-size: bkscale(@font-swatch8-font-size,0.8);
-    margin-bottom: 16px;
   }
 
   .widget.feature h3 {
     font-size: bkscale(@font-swatch8-font-size,0.6);
+    margin-bottom: 14px;
   }
 
   .widget.feature button {
@@ -1488,8 +1485,6 @@ hr.line {
     height: 10px;
     width: 10px;
    }
-
-  
 
     /* SLIDESHOW */
 
