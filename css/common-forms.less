@@ -38,23 +38,23 @@
 	border: none;
 	-webkit-font-smoothing: subpixel-antialiased !important;
 	border: 1px solid darken(@color-swatch2,2%);
-	background-color: @color-swatch2; 
-	background-color: -moz-linear-gradient(top,  lighten(@color-swatch2,10%) 0%, @color-swatch2 100%); 
-	background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch2,10%)), color-stop(100%,@color-swatch2)); 
-	background-color: -webkit-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
-	background-color: -o-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
+	background-color: @color-swatch2;
+	background-color: -moz-linear-gradient(top,  lighten(@color-swatch2,10%) 0%, @color-swatch2 100%);
+	background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@color-swatch2,10%)), color-stop(100%,@color-swatch2));
+	background-color: -webkit-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%);
+	background-color: -o-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%);
 	background-color: -ms-linear-gradient(top,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%);
-	background-color: linear-gradient(to bottom,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%); 
+	background-color: linear-gradient(to bottom,  lighten(@color-swatch2,10%) 0%,@color-swatch2 100%);
 
 
 	@media only screen and (max-width : 460px) {
 		padding: 0 1.2em;
 		font-size: bkscale(@font-swatch7-font-size, 0.75);
 		line-height: (@font-swatch7-font-size * 2);
-	} 
+	}
 
 	&:hover {
-		background-color: darken(@color-swatch2, 6%); 
+		background-color: darken(@color-swatch2, 6%);
 	}
 }
 
@@ -103,11 +103,11 @@
 		font-size: bkscale(@font-swatch7-font-size, 0.75);
 		height: (@font-swatch7-font-size * 2);
 		line-height: (@font-swatch7-font-size * 2);
-	} 
+	}
 
 
 	&:hover {
-		
+
 	}
 
 	&:focus {
@@ -115,6 +115,21 @@
 		color: darken(@font-swatch5-color, 20%);
 		outline: none;
 		box-shadow: 0 0 5px @color-swatch3;
+	}
+}
+
+input:focus {
+	&::-webkit-input-placeholder {
+		color: transparent;
+	}
+	&:-moz-placeholder {
+		color: transparent;
+	}
+	&::-moz-placeholder {
+		color: transparent;
+	}
+	&:-ms-input-placeholder {
+		color: transparent;
 	}
 }
 
@@ -127,7 +142,7 @@
 		line-height: bkscale(@font-swatch7-line-height, 0.5);
 		padding-top: 0.5em;
 		padding-bottom: 0.5em;
-	} 
+	}
 }
 
 // Labels
@@ -148,7 +163,7 @@
     @media only screen and (max-width : 460px) {
 		line-height: bkscale(@font-swatch4-line-height, 0.8);
 		font-size:bkscale(@font-swatch4-font-size, 0.8);
-	} 
+	}
 }
 
 
@@ -183,11 +198,11 @@
 		@media only screen and (max-width : 460px) {
 			font-size: bkscale(@font-swatch7-font-size, 0.75);
 			height: (@font-swatch7-font-size * 2);
-		} 
+		}
 
 		&:hover {
 			border-color: @color-swatch2;
-			
+
 		}
 
 		&:focus {
@@ -221,7 +236,7 @@ input::-moz-placeholder {  /* Firefox 19+ */
    color:    lighten(@color-swatch5,20%);
 }
 
-input:-ms-input-placeholder {  
+input:-ms-input-placeholder {
    color:    lighten(@color-swatch5,20%);
 }
 

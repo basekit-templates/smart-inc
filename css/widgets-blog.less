@@ -3,7 +3,8 @@
 @bp-blog-small: ~"only screen and (max-width : 800px)";
 
 // ======= Widget: BlogSearch
-.widget.blogsearch {
+.widget.blogsearch,
+.widget.signupform {
 	padding-bottom: 1em;
     form {
 		.form-group {
@@ -37,7 +38,7 @@
 			-ms-flex-align: center;
 			align-items: center;
 		}
-	
+
 
         label {
         	// Flex
@@ -56,13 +57,13 @@
 		    align-self: auto;
 		    // Appearance
 		    margin-right: 1em;
-		    margin-bottom: 0;	   
+		    margin-bottom: 0;
 
 		    @media @mobile {
 		    	width: 100%;
 		    }
         }
-        input {  
+        input {
         	// Flex
             -webkit-box-ordinal-group: 1;
 		    -moz-box-ordinal-group: 1;
@@ -106,9 +107,9 @@
 
 // ======= Widget: Blog Post List
 .widget.blogpostlist {
-	
+
 	.blog-post-list {
-		
+
 		.blog-post-item {
 			.clearfix;
 			border-bottom: 1px dotted @color-swatch5;
@@ -125,7 +126,7 @@
 				background-size: cover;
 				background-position: center;
 				z-index: 1000;
-				
+
 				img {
 					display: none;
 				}
@@ -144,13 +145,13 @@
 				    font-size: bkscale(@font-swatch1-font-size, 0.7);
 				    line-height: bkscale(@font-swatch1-line-height, 0.7);
 				}
-			
+
 				@media @mobile {
 				    font-size: bkscale(@font-swatch1-font-size, 0.4);
 				    line-height: bkscale(@font-swatch1-line-height, 0.4);
 				}
 
-			
+
 
 				a {
 					color: @color-swatch3;
@@ -159,19 +160,19 @@
 
 			.blog-post-summary, .blog-post-body {
 				margin-bottom: 1em;
-				
+
 			}
 
 			.blog-post-more-link {
 				float: left;
 				width: auto;
 				a {
-										
+
 				}
 			}
 			.blog-post-date {
-				float: right;				
-				
+				float: right;
+
 			}
 		}
 	}
@@ -184,7 +185,7 @@
 }
 
 
-// ============================================================================================================================== 
+// ==============================================================================================================================
 // Widget: Blog Post
 
 .widget.blogpost {
@@ -206,7 +207,7 @@
 		}
 		// Title and Content Wrap
 		.blog-post-title-content-wrap {
-			
+
 			// Title
 			h1.blog-post-title {
 				// color: @color-swatch1;
@@ -234,7 +235,7 @@
 			.blog-post-content, .blog-post-body {
 				float: left;
 				width: 70%;
-				padding: 0 50px 40px 0; 
+				padding: 0 50px 40px 0;
 				@media @bp-blog-small {
 			    	float: none;
 			    	width: auto;
