@@ -305,13 +305,15 @@
 
 			// DT-1600 fix for extra borders
 			.menu-items,
-			.widget.menu .menu-items.odd {
+			.widget.menu .menu-items.odd,
+			ol.menu-items.odd.bk3-columns {
 				overflow: hidden;
 			}
 
 			// Normal sub section items
 			.menu-items {
 				padding: 0;
+				overflow: hidden;
 				.menu-item {
 					display: inline-block;
 					vertical-align: top;
