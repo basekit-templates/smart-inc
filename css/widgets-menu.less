@@ -303,11 +303,15 @@
 				}
 			}
 
+			// DT-1600 fix for extra borders
+			.menu-items,
+			.menu-items.odd {
+				overflow: hidden;
+			}
 
 			// Normal sub section items
 			.menu-items {
 				padding: 0;
-				overflow: hidden;
 				.menu-item {
 					display: inline-block;
 					vertical-align: top;
