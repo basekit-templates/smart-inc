@@ -4,20 +4,7 @@
 
 <div class="canvas bk-pt-default">
 
-<header class="bk-header">
-    <ul class="headerborder">
-       <li class="color1"></li>
-       <li class="color2"></li>
-       <li class="color3"></li>
-    </ul>
-    <div class="wrapper clearfix">
-        <div class="companyheader clearfix">
-            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-        </div>
-        {{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
-    </div>
-</header>
+{% include "header.twig" %}
 
 <div class="pageintro">
     <div class="wrapper">
