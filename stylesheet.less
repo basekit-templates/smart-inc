@@ -197,7 +197,9 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
         -ms-flex-item-align: auto;
         align-self: auto;
 
-        position: initial;
+        @media @tablet {
+          position: initial;
+        }
       }
   }
 }
@@ -1395,6 +1397,15 @@ hr.line {
 
     .widget .extendednavigation li > .text {
       padding: 0 20px 0 0;
+    }
+
+    .widget.extendednavigation .bk-overlay {
+      width: 40px;
+      left: inherit !important;
+      right: 32px!important;
+      bottom: initial!important;
+      top: 40px!important;
+      height: 40px!important;
     }
 
     /* EXTENDED NAVIGATION - INSIDE ZONE */
