@@ -1,14 +1,16 @@
-<header class="bk-header">
+<header class="bk-header  clearfix">
     <ul class="headerborder">
        <li class="color1"></li>
        <li class="color2"></li>
        <li class="color3"></li>
     </ul>
-    <div class="wrapper clearfix">
-        <div class="companyheader clearfix">
+
+    <div class="wrapper">
+        <div class="companyheader">
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
             {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
         </div>
         {{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
     </div>
+
 </header>
