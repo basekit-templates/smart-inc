@@ -1,7 +1,7 @@
 {
     "name":"Smart Inc",
     "thumbnail":"smartinc.png",
-    "screenshot":"smartinc.png",
+    "screenshot":"smartinc-screenshot.jpg",
     "templateType":"standard",
     "pageTypes": [
         "home",
