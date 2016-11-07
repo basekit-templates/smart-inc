@@ -177,7 +177,8 @@ input:focus {
 // Selects
 .widget.ecomproductslist .productlist-filter,
 .widget.ecomcheckout .delivery,
-.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation
+.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation,
+.advancedcontactform
 {
 	& select {
 		text-indent: 0.01px;
@@ -216,6 +217,10 @@ input:focus {
 			border-color: @color-swatch2;
 		}
 	}
+}
+
+.advancedcontactform__select {
+	margin-bottom: 10px!important;
 }
 
 // Hides *custom* dropdown arrow in Firefox 30 and above
