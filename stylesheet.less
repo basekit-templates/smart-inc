@@ -17,10 +17,6 @@ body {
   background-color: @color-swatch7;
 }
 
-.wrapper {
-  width: 90%;
-  margin: 0 5%;
-}
 
 /* ===============================
    CUSTOM CSS
@@ -1556,13 +1552,6 @@ hr.line {
 
 }
 
-@media only screen and (min-width: 1140px) {
-  .wrapper {
-    width: 960px; /* 1140px - 10% for margins */
-    margin: 0 auto;
-  }
-}
-
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -1575,3 +1564,6 @@ hr.line {
   *zoom: 1;
 }
 
+
+@import "@{templateLocal}/migration/migration.less";
+@import "@{templateLocal}/migration/migration–colour.less";

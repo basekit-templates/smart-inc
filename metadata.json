@@ -147,5 +147,12 @@
             "color": "@color-swatch4",
             "letter-spacing": "-1px"
         }
+    },
+    "styles": {
+        "colors": {
+            "color--light": "@color-swatch1",
+            "color--accent": "@color-swatch3",
+            "color--dark": "@color-swatch4"   
+        }
     }
 }
