@@ -10,10 +10,14 @@
 @site-margin: auto;
 
 // Contain content
-#page-zones__main > .widget:not(.row),  // Zone widgets
-.bk-header .wrapper,                    // Header
-.bk-footer .wrapper,                    // Footer
-.bk-pagetitle__title {                  // Default page title
+.empty-zone,
+#page-zones__main:empty,
+.canvas,
+#page-zones__main > .widget:not(.row),
+.row:not(.widget):not(.row--width-no-padding) .row__container,
+.bk-header .wrapper,
+.bk-footer .wrapper,
+.feature .wrapper {
     margin-left: @site-margin;
     margin-right: @site-margin;
     max-width: @site-container;
@@ -22,32 +26,80 @@
 .bk-footer .wrapper {
     width: 90%;
 }
+.wrapper {
+    width: inherit;
+    margin: inherit;
+}
 
-#page-zones__main > .widget:not(.row) {  // Contains zone widgets outside rows
+
+// Contains zone widgets outside rows
+#page-zones__main > .widget:not(.row) {
     width: 90%;
     margin-bottom: 20px;
     margin-top: 0;
 }
 
-// Widget spacing
-#page-zones__main > .widget:not(.row):first-child,  // First zone widget
-#page-zones__main > .row + .widget:not(.row) {      // Zone widget after row
-    margin-top: 50px;
-    
-    @media @tablet {
-        margin-top: 5%;
-    }
-}
-
-// Main override
-.main,
-.bk-pt-default .main {
-    padding: 0;
-}
 
 // Row container width
 .row .row--width-contained .row__container {
     max-width: @site-container;
 }
 
+
+// Override vertical row padding
+.main .height--default .row__container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    @media @mobile {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+
+// Move spacing to first widget in the main zone (not sections)
+.edit #page-zones__main-overlay + .widget:not(.row),
+#page-zones__main > .widget:not(.row):first-child {
+    margin-top: 70px;
+    
+    @media @tablet {
+        margin-top: 50px;
+    }
+    @media @mobile {
+        margin-top: 30px;
+    }
+}
+
+
+// Move spacing to last widget in the main zone (not sections)
+#page-zones__main > .widget:not(.row):last-child {
+    margin-bottom: 50px;
+}
+
+// Add spacing to the top of a widget when it follows a sectio
+#page-zones__main > .row + .widget:not(.row) {
+    margin-top: 50px;
+    
+    @media @mobile {
+        margin-top: 30px;
+    }
+}
+
+
+// Adds spacing to the section when a widget is before it
+#page-zones__main > .widget:not(.row) + .row {
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    &:not(last-child) {
+         margin-bottom: 0;
+    }
+}
+
+
+
+
+// Widget overrides
+// -----------------------------
 

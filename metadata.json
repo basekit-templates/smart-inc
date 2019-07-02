@@ -7,6 +7,7 @@
         "home",
         "gallery"
     ],
+    "versionTenCompatible": 1,
     "tags": {
         "en": ["professional", "clean", "business", "modern", "colorful", "colourful", "stylish", "money", "magazine", "creative", "elegant", "stocks", "sophisticated"],
         "es": ["profesional", "limpio", "corporativo", "moderno", "colorido", "estilo", "dinero", "revista", "creativo", "elegante", "stocks", "sofisticado"],
@@ -146,13 +147,6 @@
             "line-height": "38px",
             "color": "@color-swatch4",
             "letter-spacing": "-1px"
-        }
-    },
-    "styles": {
-        "colors": {
-            "color--light": "@color-swatch1",
-            "color--accent": "@color-swatch3",
-            "color--dark": "@color-swatch4"   
         }
     }
 }
