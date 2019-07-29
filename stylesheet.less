@@ -17,10 +17,22 @@ body {
   background-color: @color-swatch7;
 }
 
+.wrapper {
+  width: 90%;
+  margin: 0 5%;
+}
 
 /* ===============================
    CUSTOM CSS
    =============================== */
+
+.main {
+  padding: 40px 0;
+
+  .bk-zone .widget {
+    margin-bottom: 15px;
+  }
+}
 
 body.edit .widget.navigation, body.edit .widget.extendednavigation {
   overflow: visible;
@@ -31,6 +43,10 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 .bk-pt-default .extendednavigation ul li:hover > ul {
   border: 1px solid lighten(@color-swatch5,40%);
   border-top: 0;
+}
+
+.bk-pt-default .main {
+    padding: 40px 0;
 }
 
 /* PAGE INTRO */
@@ -1538,6 +1554,13 @@ hr.line {
 
 
 
+}
+
+@media only screen and (min-width: 1140px) {
+  .wrapper {
+    width: 960px; /* 1140px - 10% for margins */
+    margin: 0 auto;
+  }
 }
 
 .clearfix:before,
