@@ -1,0 +1,86 @@
+// -----------------------------
+// Migration Styles
+// -----------------------------
+
+
+#migrated-site {
+
+
+// Stylseheet overrides
+// -----------------------------
+
+
+.main.wrapper {
+    width: 100%;
+    margin: 0;
+}
+.main {
+    padding: 0;
+}
+
+.widget.content {
+    overflow: inherit;
+}
+
+
+
+
+// Site Layout and Spacing
+// -----------------------------
+
+@site-container: 960px;
+@site-margin: auto;
+@spacing--desktop: 40px;
+
+
+// Contain content
+.empty-zone,
+#page-zones__main:empty,
+#page-zones__main > .widget:not(.row),
+.row:not(.widget):not(.row--width-no-padding) .row__container,
+.bk-header .wrapper,
+.bk-footer .wrapper,
+.bk-pagetitle {
+    margin-left: @site-margin;
+    margin-right: @site-margin;
+    max-width: @site-container;
+    width: 90%;
+}
+
+
+// Remove spacing from sections inherited from original
+.main .bk-zone .widget:not(.row) {
+    margin-bottom: 15px;
+}
+
+
+// Move spacing to first widget in the main zone (not sections)
+.edit #page-zones__main-overlay + .widget:not(.row),
+#page-zones__main > .widget:not(.row):first-child {
+    margin-top: @spacing--desktop;
+}
+
+
+// Move spacing to last widget in the main zone (not sections)
+#page-zones__main > .widget:not(.row):last-child {
+    margin-bottom: @spacing--desktop;
+}
+
+
+// Add spacing to the top of a widget when it follows a sectio
+#page-zones__main > .row + .widget:not(.row) {
+    margin-top: @spacing--desktop;
+}
+
+
+// Adds spacing to the section when a widget is before it
+#page-zones__main > .widget:not(.row) + .row {
+    margin-bottom: @spacing--desktop;
+    margin-top: @spacing--desktop;
+
+    &:not(:last-child) {
+         margin-bottom: 0;
+    }
+}
+
+}
